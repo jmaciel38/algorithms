@@ -1,27 +1,33 @@
 function diagonalDifference(arr) {
-    // Write your code here
+  if(typeof arr === 'object') {
     let lrd = 0;
     let rld = 0;
-    arr.forEach((l, i) => {
-        if(i == 0){
-            rld += arr[i][i + 2]; 
-        }else if(i == 1){
-            rld += arr[i][i]; 
-        }else{
-            rld += arr[i][i - 2]; 
-        }
-        l.forEach((c, j) => {
-            if(i == j) lrd += c;
-        });
-    });
-    let result = Math.abs(lrd - rld);
-    return result;    
+  	let rldj;
+    let result;
+    let N = arr.length;
+    for(i = 0; i < N; i ++) {
+      if(arr[i].length != arr.length) return 0;
+      for(j = 0; j < arr[i].length; j ++) {
+        if(arr[i][j] < -100 || arr[i][j] > 100) return 0;
+      }
+      rldj = (N - (1 + i))
+      lrd += arr[i][i];
+      rld += arr[i][rldj];
+    }
+    result = Math.abs(lrd - rld);
+    return result;
+  } else {
+    return 0;
+  }  
 }
 
 function checkSquareMatrix(arr) {
   if(typeof arr === 'object') {
-    for(i = 0; i < lines; i ++) {
-       if(arr[i].length != arr.length) return 'NaSM';
+    for(i = 0; i < arr.length; i ++) {
+      if(arr[i].length != arr.length) return 'NaSM';
+      for(j = 0; j < arr[i].length; j ++) {
+        if(arr[i][j] < -100 || arr[i][j] > 100) return 'NaSM';
+      }
     }
     return true;
   } else {
@@ -42,7 +48,7 @@ function checkSquareMatrixTestCase01 (arr) {
 }
 
 function runTests(arr) {
-  let testCase1 = checkSquareMatrixTestCase01(arr.test01);
+  let testCase1 = checkSquareMatrixTestCase01(test04);
   let testCase2 = checkSquareMatrixTestCase01(arr.test02);
   let testCase3 = checkSquareMatrixTestCase01(arr.test03);
   console.log({
@@ -52,6 +58,8 @@ function runTests(arr) {
   });
 }
 
+df = diagonalDifference(test06);
+console.log(df)
 test01 = [
   [11, 2, 4],
   [4, 5, 6],
@@ -66,7 +74,25 @@ test02 = [
 
 test03 = 'string';
 
-console.clear();
+test04 = [
+  [11, 2, 4],
+  [4, 5, 6],
+  [10, 8, -101],
+];
+
+test05 = [
+  [110, 2, 4],
+  [4, 5, 6],
+  [10, 8, -12],
+];
+//console.clear();
+
+test06 = [
+  [11, 2, 4, 8],
+  [4, 5, 6, 10],
+  [10, 8, -12 , 45],
+  [23, -14, 30 , 2],
+];
 
 runTests ({
   test01,
