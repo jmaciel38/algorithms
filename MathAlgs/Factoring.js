@@ -5,7 +5,11 @@ const isPrime = num => {
     return num;
 }
 
-const allEqual = arr => arr.every(val => val === 1);
+const allOne = arr => arr.every(val => val === 1);
+
+const allDiff = (arr, prime) => arr.every(val => val % prime !== 0, prime);
+
+const allPrimeDiv = (arr, prime) => arr.every(val => val % prime === 0, prime);
 
 const primesInRange = num => {
     if(typeof num != 'number' || num < 1) return 0;
@@ -22,28 +26,41 @@ const primesInRange = num => {
     return primes;
 }
 
-const factoring = num => {
-    let calcNum = num;
-    let primes = primesInRange(num);
+const factoringArr = arr => {
+    let runArr = arr;
+    let primesArr = primesInRange(Math.max(...arr));
+    let turnRes = [];
     let facNum = [];
-    let primeIndex = 0;
-    while (calcNum != 1) {
-        if(calcNum % primes[primeIndex] == 0) {
-            calcNum = calcNum / primes[primeIndex];
-            facNum.push(primes[primeIndex]);
-        } else {
-            primeIndex ++;
-        }
+    let primeArrIndex = 0;
+    let whileBoolTest = true;
+    let lcm = 1;
+    let gcd = 1;
+    while(whileBoolTest) {
+        runArr.forEach( (item, i)=> {
+            if(item % primesArr[primeArrIndex] == 0) {
+                turnRes.push(item / primesArr[primeArrIndex]);
+            } else {
+                turnRes.push(item);
+            }
+        });
+        if(!allDiff(runArr, primesArr[primeArrIndex])) facNum.push({
+            prime: primesArr[primeArrIndex],
+            divAll: allPrimeDiv(runArr, primesArr[primeArrIndex])
+        });
+        runArr = turnRes;
+        if(allDiff(runArr, primesArr[primeArrIndex])) primeArrIndex ++;
+        turnRes = [];
+        if(allOne(runArr)) whileBoolTest = false;
     }
-    console.log({
-        primes,
-        calcNum,
-        facNum
+    facNum.forEach((item, i) => {
+        lcm = lcm * item.prime;
+        if(item.divAll) gcd = gcd * item.prime;
     });
+    return {lcm, gcd};
 }
 
+let test01 = factoringArr([40, 60]);
 
-factoring(10);
-factoring(40);
-factoring(60);
-factoring(59);
+console.log({
+    test01
+});

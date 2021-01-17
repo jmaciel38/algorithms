@@ -1,7 +1,4 @@
-const allDiff = (arr, prime) => arr.every(val => {
-    //console.log(prime)
-    val % prime != 0;
-}, prime);//calcNum % primes[primeIndex] == 0
+const allDiff = (arr, prime) => arr.every(val => val % prime != 0, prime);//calcNum % primes[primeIndex] == 0
 
 let testPrime01 = 3;
 let test01 = [6,9,12,15];
