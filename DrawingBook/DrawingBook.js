@@ -23,14 +23,22 @@ const pageCount = (n, p) => {
         if(p == i || p == (i + 1)) break;
         count ++;
     }
-    for(let i = n; i => 0; i -= 2) {
-        if(p == i || p == (i - 1)) break;
-        countRev ++;
+    if(n % 2 == 0) {
+        for(let i = n + 1; i > 0; i -= 2) {
+            if(p == i || p == (i - 1)) break;
+            countRev ++;
+        }
+    } else {
+        for(let i = n; i > 0; i -= 2) {
+            if(p == i || p == (i - 1)) break;
+            countRev ++;
+        }
     }
     console.log({count,countRev});
     return Math.min(...[count,countRev]);
 }
 
+/*
 main('input00.txt');
-main('input01.txt');
+main('input01.txt');*/
 main('input02.txt');
