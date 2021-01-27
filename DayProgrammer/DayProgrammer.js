@@ -21,8 +21,22 @@ const main = fileName => {
  */
 const dayOfProgrammer = year => {
     if(year < 1700 || year > 2700) return 0;
-    console.log({year});
+    let JulianLeapYear = false;
+    let GregorianLeapYear = false;
+    if(year < 1918 && (year % 4) === 0) JulianLeapYear = true;
+    if(year > 1918 && (year % 4) === 0 && (year % 400) === 0 && (year % 100) !== 0 ) GregorianLeapYear = true;
+    console.log({
+        year,
+        JulianLeapYear,
+        GregorianLeapYear,
+        yearPerFour: (year % 4),
+        yearPerFourHundred: (year % 400),
+        yearPerHundred: (year % 100),
+    });
     return 1;
 }
 
 main('input00.txt');
+main('input01.txt');
+main('input02.txt');
+main('input60.txt');
