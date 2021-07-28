@@ -7,7 +7,7 @@ class ReadFile {
     File file = new File("./test01.txt");
     Scanner sc = new Scanner(file);
     while (sc.hasNext()) {
-        System.out.print(sc.nextLine());
+      System.out.print(sc.nextLine());
     }
     sc.close();
   }
