@@ -4,3 +4,5 @@
 
 *.txt
 java/*.txt
+*.yml
+*.sh
