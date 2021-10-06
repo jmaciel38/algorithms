@@ -6,3 +6,4 @@
 java/*.txt
 *.yml
 *.sh
+node_modules/
