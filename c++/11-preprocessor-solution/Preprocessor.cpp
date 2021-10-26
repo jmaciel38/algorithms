@@ -17,6 +17,17 @@ using namespace std;
 FUNCTION(minimum, <);
 FUNCTION(maximum, >);
 
+/* sugestion of optmization in discutions of challenge.*/
+int start_up() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    return 0;
+}
+
+int static r = start_up();
+
+#define endl '\n';
+
 int main(){
   std::ifstream file;
   std::ifstream output;
