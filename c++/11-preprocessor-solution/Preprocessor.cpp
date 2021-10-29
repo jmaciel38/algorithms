@@ -1,8 +1,10 @@
+//Solution in discutions of problem.
 #define toStr(x) #x
-#define io(arr)
-#define FUNCTION(arr, s)
-#define INF(arr)
-
+#define io(v) file >> v
+// #define io(v) cin >> v
+#define FUNCTION(name,operator) inline void name(int &current, int candidate) {!(current operator candidate) ? current = candidate : false;}
+#define INF (unsigned)!((int)0)
+#define foreach(v, i) for (int i = 0; i < v.size(); ++i)
 
 #include <iostream>
 #include <vector>
@@ -48,11 +50,11 @@ int main(){
     }
     int ans = mx - mn;
     cout << toStr(Result =) <<' '<< ans;
-    cout << "This is the line number " << __LINE__;
-    cout << " of file " << __FILE__ << ".\n";
-    cout << "Its compilation began " << __DATE__;
-    cout << " at " << __TIME__ << ".\n";
-    cout << "The compiler gives a __cplusplus value of " << __cplusplus;
+    // cout << "This is the line number " << __LINE__;
+    // cout << " of file " << __FILE__ << ".\n";
+    // cout << "Its compilation began " << __DATE__;
+    // cout << " at " << __TIME__ << ".\n";
+    // cout << "The compiler gives a __cplusplus value of " << __cplusplus;
     return 0;
   } else {
     std::cout << "file read error.\n\n";
