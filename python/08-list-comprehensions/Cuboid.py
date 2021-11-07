@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    # x = int(raw_input())
+    # y = int(raw_input())
+    # z = int(raw_input())
+    # n = int(raw_input())
+    f = open("./input/input00.txt", "r")
+    x = int(f.readline())
+    y = int(f.readline())
+    z = int(f.readline())
+    n = int(f.readline())
+    print ([[k, l, m] for k in range(x+1) for l in range(y+1) for m in range(z+1) if (( k + l + m ) != n)])
+    print(x,y,z,n)
