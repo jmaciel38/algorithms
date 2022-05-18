@@ -18,42 +18,42 @@ while continuar == 1:
     choice = input('Entre com o codigo do produto desejado:')
     if choice == 100:
         total += 9.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 101:
         total += 11.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 102:
         total += 12.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 103:
         total += 12.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 104:
         total += 14.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 105:
         total += 17.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 200:
         total += 5.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     elif choice == 201:
         total += 4.00
-        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao: ') )
+        continuar = int( input('Deseja pedir mais alguma coisa: \n 1 - sim \n 0 - nao \n >> ') )
         if continuar == 0:
             break
     else:
