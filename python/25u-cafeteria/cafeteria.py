@@ -1,15 +1,15 @@
 name = 'Carolina Correia de Souza'
 print('Bem vindo a Lanchonete de {}'.format(name))
 menu = ' Cardapio '.center(40, '*')+'\n'
-menu += '|'+'Codigo'.center(10, ' ')+'|'+'Descricao'.center(24, ' ')+'|'+'Valor'.center(10, ' ')+'|\n'
-menu += '|'+'100'.center(10, ' ')+'|'+'Cachorro Quente'.center(24, ' ')+'|'+'9,00'.center(10, ' ')+'|\n'
-menu += '|'+'101'.center(10, ' ')+'|'+'Cachorro Quente duplo'.center(24, ' ')+'|'+'11,00'.center(10, ' ')+'|\n'
-menu += '|'+'102'.center(10, ' ')+'|'+'X-Egg'.center(24, ' ')+'|'+'10,00'.center(10, ' ')+'|\n'
-menu += '|'+'103'.center(10, ' ')+'|'+'X-Salada'.center(24, ' ')+'|'+'10,00'.center(10, ' ')+'|\n'
-menu += '|'+'104'.center(10, ' ')+'|'+'X-Bacon'.center(24, ' ')+'|'+'14,00'.center(10, ' ')+'|\n'
-menu += '|'+'105'.center(10, ' ')+'|'+'X-Tudo'.center(24, ' ')+'|'+'17,00'.center(10, ' ')+'|\n'
-menu += '|'+'200'.center(10, ' ')+'|'+'Refrigerante lata'.center(24, ' ')+'|'+'5,00'.center(10, ' ')+'|\n'
-menu += '|'+'201'.center(10, ' ')+'|'+'Cha gelado'.center(24, ' ')+'|'+'4,00'.center(10, ' ')+'|\n'
+menu += '|'+'Codigo'.center(8, ' ')+'|'+'Descricao'.center(24, ' ')+'|'+'Valor'.center(8, ' ')+'|\n'
+menu += '|'+'100'.center(8, ' ')+'|'+'Cachorro Quente'.center(24, ' ')+'|'+'9,00'.center(8, ' ')+'|\n'
+menu += '|'+'101'.center(8, ' ')+'|'+'Cachorro Quente duplo'.center(24, ' ')+'|'+'11,00'.center(8, ' ')+'|\n'
+menu += '|'+'102'.center(8, ' ')+'|'+'X-Egg'.center(24, ' ')+'|'+'8,00'.center(8, ' ')+'|\n'
+menu += '|'+'103'.center(8, ' ')+'|'+'X-Salada'.center(24, ' ')+'|'+'8,00'.center(8, ' ')+'|\n'
+menu += '|'+'104'.center(8, ' ')+'|'+'X-Bacon'.center(24, ' ')+'|'+'14,00'.center(8, ' ')+'|\n'
+menu += '|'+'105'.center(8, ' ')+'|'+'X-Tudo'.center(24, ' ')+'|'+'17,00'.center(8, ' ')+'|\n'
+menu += '|'+'200'.center(8, ' ')+'|'+'Refrigerante lata'.center(24, ' ')+'|'+'5,00'.center(8, ' ')+'|\n'
+menu += '|'+'201'.center(8, ' ')+'|'+'Cha gelado'.center(24, ' ')+'|'+'4,00'.center(8, ' ')+'|\n'
 
 print(menu)
 continuar = 1
